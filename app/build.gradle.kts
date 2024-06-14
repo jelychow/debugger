@@ -62,6 +62,8 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(project(":debugger"))
+//    implementation ("com.github.jelychow:debugger:-SNAPSHOT")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -72,4 +74,6 @@ dependencies {
 
     implementation(libs.moshi.kotlin)
     kapt(libs.moshi.kotlin.codegen)
+    implementation(libs.okhttp)
+
 }
