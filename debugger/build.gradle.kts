@@ -65,10 +65,9 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    debugImplementation(libs.flipper)
-    debugImplementation(libs.flipper.network.plugin)
-    debugImplementation(libs.soloader)
-    releaseImplementation(libs.flipper.noop)
+    implementation(libs.flipper)
+    implementation(libs.flipper.network.plugin)
+    implementation(libs.soloader)
     implementation(libs.okhttp)
 }
 
