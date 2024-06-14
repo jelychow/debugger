@@ -1,5 +1,6 @@
 plugins {
     kotlin("kapt")
+    id ("maven-publish")
 
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
