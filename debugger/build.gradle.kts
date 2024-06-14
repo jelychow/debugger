@@ -71,53 +71,15 @@ dependencies {
     implementation(libs.okhttp)
 }
 
-//afterEvaluate {
-//    publishing {
-//        publications {
-//            create<MavenPublication>("maven") {
-//                from(components["java"])
-//
-//                groupId = "com.zz"
-//                artifactId = "debugger"
-//                version = "1.0.0"
-//
-//                pom {
-//                    name.set("flipper_debugger")
-//                    description.set("A sample Gradle Kotlin DSL library project")
-//                    url.set("https://example.com")
-//
-//                    licenses {
-//                        license {
-//                            name.set("The Apache License, Version 2.0")
-//                            url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
-//                        }
-//                    }
-//
-//                    developers {
-//                        developer {
-//                            id.set("jelychow")
-//                            name.set("zhou zheng")
-//                            email.set("jelychow@gmail.com")
-//                        }
-//                    }
-//
-//                    scm {
-//                        connection.set("scm:git:git://example.com/my-library.git")
-//                        developerConnection.set("scm:git:ssh://example.com/my-library.git")
-//                        url.set("https://example.com/my-library")
-//                    }
-//                }
-//            }
-//        }
-//        repositories {
-//            maven {
-//                name = "GitHubPackages"
-//                url = uri("https://maven.pkg.github.com/OWNER/REPOSITORY")
-//                credentials {
-//                    username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
-//                    password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
-//                }
-//            }
-//        }
-//    }
-//}
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "com.zz.flipper"
+                artifactId = "debugger"
+                version = "1.0.0"
+            }
+        }
+    }
+}
